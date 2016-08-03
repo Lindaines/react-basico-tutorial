@@ -7,7 +7,7 @@ class Componente extends React.Component{
 			contador : 0,
 		}
 	}
-	_somarContador(valor){
+	_updateContador(valor){
 		this.setState({
 			contador: this.state.contador + valor,
 		})
@@ -17,9 +17,9 @@ class Componente extends React.Component{
 		return (
 			<div>
 				<h1>Contador</h1>
-				<button onClick={() => this._somarContador(1)}>Somar</button>
+				<button onClick={() => this._updateContador(1)}>Somar</button>
 				<span>{this.state.contador}</span>
-				<button onClick={this._somarContador.bind(this, -1)}>Subtrair</button>
+				<button onClick={() => this._updateContador(-1)}>Subtrair</button>
 			</div>
 		);
 	}
