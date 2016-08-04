@@ -16,14 +16,14 @@ class Componente extends React.Component{
 	render(){
 		return (
 			<div>
-				<h1>Contador</h1>
+				<h1 className ={this.props.classe}>Contador</h1>
 				<button onClick={() => this._updateContador(1)}>Somar</button>
 				<span>{this.state.contador}</span>
 				<button onClick={() => this._updateContador(-1)}>Subtrair</button>
+				<p>{this.props.classe}</p>
 			</div>
 		);
 	}
 }
 
 export default Componente;
-
